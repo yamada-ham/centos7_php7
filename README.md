@@ -86,5 +86,5 @@ $ set global validate_password_policy=LOW;
 
 パスワード変更
 ```
-$ SET PASSWORD FOR root@localhost=password('パスワード');
+$ SET PASSWORD FOR root@localhost=password('root');
 ```
