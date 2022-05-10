@@ -24,11 +24,12 @@ services:
     - 18002:8002
     - 18003:8003
     - 18004:8004
+    - 13000:3000
     volumes:
     - ./html:/var/www/html:cached
     - mysql-data:/var/lib/mysql
     working_dir: /var/www/html
     tty: true
-    platform: linux/x86_64 #CPUがm1の場合
+    # platform: linux/x86_64 #CPUがm1の場合
     privileged: true  
     command: /sbin/init  

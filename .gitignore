@@ -3,4 +3,4 @@
 
 html/*
 !html/phpinfo
-!html/php_error.log
+# !html/php_error.log

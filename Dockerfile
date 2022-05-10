@@ -31,7 +31,7 @@ RUN curl -sS https://getcomposer.org/installer | php && \
 
 # node.js 導入
 # RUN curl -fsSL https://rpm.nodesource.com/setup_16.x
-RUN yum install -y https://rpm.nodesource.com/pub_14.x/el/9/x86_64/nodesource-release-el9-1.noarch.rpm
+RUN yum install -y https://rpm.nodesource.com/pub_16.x/el/9/x86_64/nodesource-release-el9-1.noarch.rpm
 
 # lsof は、サーバーで特定のポート番号を待ち受けているかどうか、指定ファイルは誰が読み込んでいるのかを調べる
 RUN yum install -y nodejs \
