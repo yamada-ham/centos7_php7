@@ -9,10 +9,16 @@ Node.js v16
 gulp
 ```
 
-# Docker の導入
-[Dockerアプリインストール](https://docs.docker.com/get-docker/)
 
 # DockerでCentOSを使ったLAMP環境構築
+
+## Docker の導入
+[Dockerアプリインストール](https://docs.docker.com/get-docker/)
+
+git クローン
+```
+$ git clone git@github.com:WaoconSystemSection/centos.git
+```
 
 コマンド ビルドして起動 
 ```
