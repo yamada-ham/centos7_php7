@@ -9,7 +9,7 @@ RUN systemctl enable httpd.service
 # PHP  
 RUN yum install -y epel-release
 RUN yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-RUN yum -y install --enablerepo=remi,epel,remi-php72 php php-mysqlnd php-mbstring php-gd php-xml php-xmlrpc php-pecl-mcrypt php-fpm php-opcache php-apcu php-pear php-pdo php-zip php-unzip php-pecl-zip phpMyAdmin
+RUN yum -y install --enablerepo=remi,epel,remi-php74 php php-mysqlnd php-mbstring php-gd php-xml php-xmlrpc php-pecl-mcrypt php-fpm php-opcache php-apcu php-pear php-pdo php-zip php-unzip php-pecl-zip phpMyAdmin
 
 # MySQL GPGキーエラー対策で新しいGPGキーをインストール
 RUN rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022 && \
@@ -25,13 +25,13 @@ RUN curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer
 
 # composer バージョン変更
-RUN composer self-update 1.9.0
+# RUN composer self-update 1.8.3
 
 # RUN yum -y install git
 
 # node.js 導入
 # RUN curl -fsSL https://rpm.nodesource.com/setup_16.x
-RUN yum install -y https://rpm.nodesource.com/pub_14.x/el/9/x86_64/nodesource-release-el9-1.noarch.rpm
+RUN yum install -y https://rpm.nodesource.com/pub_16.x/el/9/x86_64/nodesource-release-el9-1.noarch.rpm
 
 # lsof は、サーバーで特定のポート番号を待ち受けているかどうか、指定ファイルは誰が読み込んでいるのかを調べる
 RUN yum install -y nodejs \
