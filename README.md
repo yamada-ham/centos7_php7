@@ -17,7 +17,7 @@ gulp
 
 git クローン
 ```
-$ git clone git@github.com:WaoconSystemSection/centos.git
+$ git clone git@github.com:yamada-ham/centos7_php7.git
 ```
 
 コマンド ビルドして起動 
